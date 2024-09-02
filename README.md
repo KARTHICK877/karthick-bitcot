@@ -1,3 +1,5 @@
+Deployed Frontend: https://main--karthick-bitcot.netlify.app/
+Source Code: https://github.com/KARTHICK877/karthick-bitcot.git
 <h1 align="center">Hi <img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="30px">, I'm KARTHICK</h1>
 <h3 align="center">A passionate MERN STACK developer from India</h3>
 <p align="center">
