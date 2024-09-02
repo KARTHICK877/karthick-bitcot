@@ -5,6 +5,7 @@ import { MdDelete, MdEdit } from 'react-icons/md';
 import Modal from './Modal'; 
 import ConfirmDeleteModal from './ConfirmDeleteModal'; 
 import PreviewModal from './PreviewModal'; 
+import { FiSearch } from 'react-icons/fi';
 
 function AllContact() {
   const [contacts, setContacts] = useState([]);
@@ -73,13 +74,16 @@ function AllContact() {
         />
       </h1>
       <div className='bg-white p-6 rounded-lg shadow-md text-gray-800'>
-        <input 
-          type='text' 
-          placeholder='Search Contact' 
-          value={searchQuery}
-          onChange={(e) => setSearchQuery(e.target.value)}
-          className='w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600'
-        />
+      <div className="relative w-full">
+      <input
+        type="text"
+        placeholder="Search Contact"
+        value={searchQuery}
+        onChange={(e) => setSearchQuery(e.target.value)}
+        className="w-full p-3 pl-10 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600"
+      />
+      <FiSearch className="absolute right-3 top-4 text-gray-500 font-bold" />
+    </div>
         <div className='mt-5 space-y-4'>
           {filteredContacts.map((contact, index) => (
             <div 
