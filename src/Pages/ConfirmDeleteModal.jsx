@@ -1,7 +1,7 @@
 import React from 'react';
 
 const ConfirmDeleteModal = ({ isOpen, onClose, onConfirm }) => {
-  if (!isOpen) return null;
+    if (!isOpen) return ;
 
   return (
     <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-60">

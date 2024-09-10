@@ -28,13 +28,13 @@ function AllContact() {
   }, []);
 
   const handleAddContact = (newContact) => {
-    setContacts([...contacts, { id: contacts.length + 1, ...newContact }]);
+    setContacts([...contacts, { id: contacts.length + 1, ...newContact }]); //crate new id base curr id
   };
 
   const handleUpdateContact = (updatedContact) => {
     const updatedContacts = contacts.map((contact) =>
-      contact.id === updatedContact.id ? updatedContact : contact
-    );
+      contact.id === updatedContact.id ? updatedContact : contact  //cre n a m id
+    );//replace
     setContacts(updatedContacts);
   };
 
@@ -54,13 +54,13 @@ function AllContact() {
   };
 
   const handleConfirmDelete = () => {
-    setContacts(contacts.filter(contact => contact.id !== contactToDelete.id));
+    setContacts(contacts.filter(contact => contact.id !== contactToDelete.id));  //remove
     setIsDeleteModalOpen(false);
     setContactToDelete(null);
   };
 
   const filteredContacts = contacts.filter(contact =>
-    contact.name.toLowerCase().includes(searchQuery.toLowerCase())
+    contact.name.toLowerCase().includes(searchQuery.toLowerCase())//search query
   );
   
   
